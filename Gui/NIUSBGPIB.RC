@@ -1,0 +1,643 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+#include "driver.h"
+#include "dataseg.h" /* To get driver contract */
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_NETWORK DIALOGEX 18, 18, 243, 151
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Ni Usb Gpib Driver Configuration"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Simulate &mode",IDC_CB_SIMULATE,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,170,23,65,10
+    CONTROL         "&Watchdog on",IDC_CB_WATCHDOG,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_GROUP | WS_TABSTOP,170,36,65,10
+    DEFPUSHBUTTON   "&OK",IDOK,177,73,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,177,95,50,14
+    PUSHBUTTON      "&Help",IDC_PB_HELP,177,116,50,14
+    GROUPBOX        "Vid/Pid",IDC_STATIC,6,4,157,49
+    EDITTEXT        IDC_E_VID,11,31,63,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Vendor ID",IDC_STATIC,13,20,33,8
+    EDITTEXT        IDC_E_PID,79,31,63,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Product ID",IDC_STATIC,82,20,35,8
+    LTEXT           "Bus",IDC_STATIC,9,54,20,12
+    LTEXT           "Addr",IDC_STATIC,39,54,24,12
+    LTEXT           "Port",IDC_STATIC,69,54,24,11
+    LTEXT           "Depth",IDC_STATIC,102,54,23,12
+    LTEXT           "USB Count",IDC_STATIC,66,92,44,9
+    COMBOBOX        IDC_CO_USB_IDX,6,106,48,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "USB Index",IDC_STATIC,8,93,44,8
+    COMBOBOX        IDC_CO_USB_CNT,63,106,48,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "If Num",IDC_STATIC,132,54,23,12
+    LTEXT           "Gpib Addr",IDC_STATIC,127,93,32,8
+    COMBOBOX        IDC_CO_GPIB_ADDR,119,106,48,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CO_BUSNUM,8,67,24,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CO_ADDR,35,67,24,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CO_PORT,65,67,24,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CO_DEPTH,97,67,24,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CO_IFNUM,130,67,24,30,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DEV_GPIB_STAT DIALOGEX 18, 18, 142, 86
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "GPIB I/O Status"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,84,19,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,84,36,50,14
+    PUSHBUTTON      "&Help",IDC_PB_HELP,84,53,50,14
+    COMBOBOX        IDC_CO_ADDRESS,16,23,48,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DRVF_COMMAND DIALOG 18, 18, 264, 125
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Command NiUsbGpib"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Command",IDC_STATIC,6,2,94,117,WS_GROUP
+    LTEXT           "Write &Buffer",IDC_STATIC,12,14,81,8
+    EDITTEXT        IDC_E_WBUFFER,12,23,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "# of &written bytes",IDC_STATIC,12,39,81,8
+    EDITTEXT        IDC_E_WLENGTH,12,48,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "Destination &Address",IDC_STATIC,12,64,81,8
+    EDITTEXT        IDC_E_ADDRESS,12,73,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Timeout",IDC_STATIC,12,89,81,8
+    EDITTEXT        IDC_E_TIMEOUT,12,98,81,13,ES_AUTOHSCROLL | WS_GROUP
+    GROUPBOX        "Reply",IDC_STATIC,106,2,94,90
+    LTEXT           "Read Bu&ffer",IDC_STATIC,112,14,81,8
+    EDITTEXT        IDC_E_RBUFFER,112,23,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "# of &read bytes",IDC_STATIC,112,39,81,8
+    EDITTEXT        IDC_E_RLENGTH,112,48,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "R&esult",IDC_STATIC,112,64,81,8
+    EDITTEXT        IDC_E_RESULT,112,73,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Status",IDC_STATIC,119,97,77,8
+    EDITTEXT        IDC_E_STATUS,119,106,81,13,ES_AUTOHSCROLL | WS_GROUP
+    DEFPUSHBUTTON   "&OK",IDOK,208,63,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,208,84,50,14
+    PUSHBUTTON      "&Help",IDC_PB_HELP,208,105,50,14
+END
+
+IDD_DEVF_GET_DEVSTAT DIALOG 18, 18, 144, 77
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Get Device Status (Dev Level)"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Device status",IDC_STATIC,6,23,72,8
+    EDITTEXT        IDC_E_DDSTATUS,6,32,72,13,ES_AUTOHSCROLL | WS_GROUP
+    DEFPUSHBUTTON   "&OK",IDOK,86,11,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,86,32,50,14
+    PUSHBUTTON      "&Help",IDC_PB_HELP,86,54,50,14
+END
+
+IDD_DRVF_GET_DEVSTAT DIALOG 18, 18, 166, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Get Device Status (Drv Level)"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Device &address",IDC_STATIC,8,9,82,8
+    EDITTEXT        IDC_E_ADDRESS,8,17,82,12,ES_AUTOHSCROLL
+    LTEXT           "&Device status",IDC_STATIC,8,34,82,8
+    EDITTEXT        IDC_E_DDSTATUS,8,43,82,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Result code",IDC_STATIC,8,61,82,8
+    EDITTEXT        IDC_E_RESULT,8,70,82,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,105,31,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,105,50,50,14
+    PUSHBUTTON      "&Help",IDC_PB_HELP,105,69,50,14
+END
+
+IDD_DRVF_GET_DRVSTAT DIALOG 18, 18, 144, 76
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Get Driver Status"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Driver status",IDC_STATIC,6,16,72,8
+    EDITTEXT        IDC_E_DDSTATUS,6,25,72,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Function Status",IDC_STATIC,6,45,72,8
+    EDITTEXT        IDC_E_STATUS,6,54,72,13,ES_AUTOHSCROLL | WS_GROUP
+    DEFPUSHBUTTON   "&OK",IDOK,89,14,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,89,34,50,14
+    PUSHBUTTON      "&Help",IDC_PB_HELP,89,54,50,14
+END
+
+IDD_DRVF_PORT_INPUT DIALOG 18, 18, 136, 114
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Port Input"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Input &port",IDC_STATIC,8,8,61,8
+    EDITTEXT        IDC_E_ADDRESS,8,17,61,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Size",IDC_STATIC,8,34,61,8
+    COMBOBOX        IDC_CO_LENGTH,8,43,61,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Destination &tag",IDC_STATIC,8,58,61,8
+    EDITTEXT        IDC_E_VALUE,8,67,61,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Result code",IDC_STATIC,8,83,61,8
+    EDITTEXT        IDC_E_RESULT,8,92,61,13,ES_AUTOHSCROLL | WS_GROUP
+    DEFPUSHBUTTON   "&OK",IDOK,81,17,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,81,38,50,14
+    PUSHBUTTON      "&Help",IDC_PB_HELP,81,59,50,14
+END
+
+IDD_DRVF_PORT_OUTPUT DIALOG 18, 18, 136, 113
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Port Input"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Output &port",IDC_STATIC,8,8,61,8
+    EDITTEXT        IDC_E_ADDRESS,8,17,61,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Size",IDC_STATIC,8,34,61,8
+    COMBOBOX        IDC_CO_LENGTH,8,43,61,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Output &value",IDC_STATIC,8,58,61,8
+    EDITTEXT        IDC_E_VALUE,8,67,61,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Result code",IDC_STATIC,8,83,61,8
+    EDITTEXT        IDC_E_RESULT,8,92,61,13,ES_AUTOHSCROLL | WS_GROUP
+    DEFPUSHBUTTON   "&OK",IDOK,81,18,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,81,39,50,14
+    PUSHBUTTON      "&Help",IDC_PB_HELP,81,60,50,14
+END
+
+IDD_DRVF_PEEK DIALOG 18, 18, 156, 105
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Peek"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&DPR offset",IDC_STATIC,8,7,77,8
+    EDITTEXT        IDC_E_ADDRESS,8,16,77,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&# of bytes",IDC_STATIC,8,31,77,8
+    EDITTEXT        IDC_E_WLENGTH,8,39,77,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "Read &Buffer",IDC_STATIC,8,56,77,8
+    EDITTEXT        IDC_E_RBUFFER,8,64,77,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Result code",IDC_STATIC,8,79,77,8
+    EDITTEXT        IDC_E_RESULT,8,87,77,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,98,21,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,98,42,50,14
+    PUSHBUTTON      "&Help",IDC_PB_HELP,98,63,50,14
+END
+
+IDD_DRVF_POKE DIALOG 18, 18, 163, 106
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Poke"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&DPR offset",IDC_STATIC,8,6,77,8
+    EDITTEXT        IDC_E_ADDRESS,8,15,77,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&# of bytes",IDC_STATIC,8,30,77,8
+    EDITTEXT        IDC_E_WLENGTH,8,39,77,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "Write &Buffer",IDC_STATIC,8,54,77,8
+    EDITTEXT        IDC_E_WBUFFER,8,63,77,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Result code",IDC_STATIC,8,78,77,8
+    EDITTEXT        IDC_E_RESULT,8,86,77,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,101,18,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,101,39,50,14
+    PUSHBUTTON      "&Help",IDC_PB_HELP,101,60,50,14
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "#include ""driver.h""\r\n"
+    "#include ""dataseg.h"" /* To get driver contract */\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""drvrid.h""\r\n"
+    "#include ""version.h""\r\n"
+    "#include ""NiUsbGpib.hh""\r\n"
+    "/* Now the 'code' files */\r\n"
+    "#include ""verbldll.rc2""\r\n"
+    "#include ""NiUsbGpib.rcd""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_NETWORK, DIALOG
+    BEGIN
+        RIGHTMARGIN, 238
+        BOTTOMMARGIN, 137
+    END
+
+    IDD_DEV_GPIB_STAT, DIALOG
+    BEGIN
+    END
+
+    IDD_DRVF_COMMAND, DIALOG
+    BEGIN
+    END
+
+    IDD_DEVF_GET_DEVSTAT, DIALOG
+    BEGIN
+    END
+
+    IDD_DRVF_GET_DEVSTAT, DIALOG
+    BEGIN
+    END
+
+    IDD_DRVF_GET_DRVSTAT, DIALOG
+    BEGIN
+    END
+
+    IDD_DRVF_PORT_INPUT, DIALOG
+    BEGIN
+    END
+
+    IDD_DRVF_PORT_OUTPUT, DIALOG
+    BEGIN
+    END
+
+    IDD_DRVF_PEEK, DIALOG
+    BEGIN
+    END
+
+    IDD_DRVF_POKE, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_NETWORK AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DEV_GPIB_STAT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_CP_SOFTWARE_FAULT   "IDS_ERR_SOFTWARE_FAULT %1 %2  %3 %4."
+    IDS_CP_TOO_MANY_DRIVERS "You exceeded the limit of  %4 instances for the NIUSBGPIB  driver. "
+    IDS_CP_DRIVER_NOT_CONFIGURED "Driver '%1' is not configured."
+    IDS_CP_DEVICE_NOT_CONFIGURED "Device '%1' is not configured."
+    IDS_CP_UNKNOWN_DEVICE   "Unknown device '%1'. "
+    IDS_CP_NO_DEVICES       "There are no devices defined."
+    IDS_CP_NETPASS1_ERROR   "Error in NetPass1"
+    IDS_CP_UNKNOWN_ACCESS   "Device '%1' has unknown Access of type %3 on Point '%4'."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CP_NO_INPUTS        "Point '%1' on device '%2' has no expected inputs."
+    IDS_CP_NO_OUTPUTS       "Point '%1' on device '%2' has no expected outputs."
+    IDS_CP_NO_MEMORY        "No memory"
+    IDS_CP_NETCONFIG_ID     "Driver '%1': Invalid configuration (wrong NETCONFIG  Id)."
+    IDS_CP_NETCONFIG_VERS   "Driver '%1': Invalid configuration (wrong  NETCONFIG version)."
+    IDS_CP_NETCONFIG_DPADR  "Driver '%1': Invalid configuration (wrong  DP address)."
+    IDS_CP_NETCONFIG_PORT   "Driver '%1': Invalid configuration (wrong Port address)."
+    IDS_CP_NETCONFIG_WATCHDOG 
+                            "Driver '%1': Invalid configuration (wrong Watchdog code)."
+    IDS_CP_NETCONFIG_HWTEST "Driver '%1': Invalid configuration (wrong  hw  test code)."
+    IDS_CP_NETCONFIG_STOPSTATE 
+                            "Driver '%1': Invalid configuration (wrong  StopState code)."
+    IDS_CP_NETCONFIG_SIMULATE 
+                            "Driver '%1': Invalid configuration (wrong  Simulate code)."
+    IDS_CP_NETCONFIG_BAUDRATE 
+                            "Driver '%1': Invalid configuration (wrong baud rate code)."
+    IDS_CP_NETCONFIG_IRQ    "Driver '%1': Invalid configuration (wrong interrupt level)."
+    IDS_CP_NETCONFIGSIZE    "Driver '%1': incorrect size ( %3)  for NETCONFIG struct.  Should be %4."
+    IDS_CP_SAME_DPRADR      "Drivers '%1' and '%2' have the same dual port address %3."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CP_SAME_PORT        "Drivers '%1' and '%2' have the same port address %3."
+    IDS_CP_SAME_IRQ         "Drivers '%1' and '%2' use the same interrupt level %3."
+    IDS_CP_DEVCONFIG_NETID  "Driver '%1', device '%2' : Invalid configuration (wrong associated  NETCONFIG Id)."
+    IDS_CP_DEVCONFIG_ID     "Driver '%1', device '%2' : Invalid configuration (wrong DEVCONFIG Id)."
+    IDS_CP_DEVCONFIG_VERS   "Driver '%1', device '%2' : Invalid configuration (wrong DEVCONFIG version)."
+    IDS_CP_DEVCONFIG_ADDRESS 
+                            "Driver '%1', device '%2' : Invalid configuration (wrong link address)."
+    IDS_CP_DEVCONFIG_CRITICAL 
+                            "Driver '%1', device '%2 ': Invalid configuration (wrong critical code)."
+    IDS_CP_DEVCONFIG_ERR    " '%2': Invalid config block on  '%1'."
+    IDS_CP_DEVCONFIG_INVALID_PCODE "Invalid  Product Code  '%2' on  '%1'."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CP_OVERLAPP         "Driver '%1',  devices '%2' and '%3' are  overlapped."
+    IDS_CP_SAME_DEVICE_ADDRESS 
+                            "Devices '%1' and '%2' have the same address (%4). Driver  '%3'."
+    IDS_CP_DEVCONFIGFIELD   "'%2': DEVCONFIG field  '%3'  wrong value:  %4."
+    IDS_CP_DEVCONFIGSIZE    "Device '%1': incorrect size ( %3)  for DEVCONFIG struct.  Should be %4."
+    IDS_CP_CANNOT_GET_DEVCONFIG "Cannot get configuration for device '%1''."
+    IDS_CP_CANNOT_GET_NETCONFIG "Cannot get configuration for driver '%1'."
+    IDS_CP_INVALID_PORT     "Invalid port address (%3) on %1"
+    IDS_CP_INVALID_DPR      "Invalid memory address (%3) on %1"
+    IDS_CP_INVALID_STOPSTATE "Invalid stop state code on %1"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CP_INVALID_BAUDRATE "Invalid baud rate on %1"
+    IDS_CP_INVALID_POINT    "Invalid point on %1"
+    IDS_CP_POINT_OUTSIDE    "Point '%1' is outside the I/O image of device  '%2'."
+    IDS_CP_INVALID_IRQLEVEL "Invalid interrupt level (%3) on %1"
+    IDS_CP_POINT_OVERLAP    "Points '%1' and '%2' overlap in the  I/O space of device '%3'."
+    IDS_CP_CANNOT_FIND_NETWORK "Cannot find network '%1'."
+    IDS_CP_INVALID_INDEX    "Invalid Index number"
+    IDS_CP_INVALID_USB_COUNT "Invalid Count"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_NIUSBGPIB_HW_TEST   "Hardware test failure on '%1'"
+    IDS_NIUSBGPIB_INVALID_ADDERSS "Device '%3' has an invalid address."
+    IDS_NIUSBGPIB_DEVICE_OFFLINE "Device '%3' is offline."
+    IDS_NIUSBGPIB_TIMEOUT   "NIUSBGPIB timeout."
+    IDS_NIUSBGPIB_READ_SIZE "Read  buffer too short."
+    IDS_NIUSBGPIB_WRITE_SIZE "Write buffer too short."
+    IDS_NIUSBGPIB_RW_ZERO   "Zero bytes to be transferred."
+    IDS_NIUSBGPIB_DPR_OUT   "Out of DPR image."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_VLCRTERR_CREATE_SEMAPHORE "Cannot create semaphore."
+    IDS_VLCRTERR_DELETE_SEMAPHORE "Cannot delete semaphore."
+    IDS_VLCRTERR_CREATE_DESCRIPTOR "Cannot create descriptor for '%1'."
+    IDS_VLCRTERR_DELETE_DESCRIPTOR "Cannot delete descriptor on '%1'."
+    IDS_VLCRTERR_CREATE_SEGMENT "Cannot create segment."
+    IDS_VLCRTERR_DELETE_SEGMENT "Cannot delete segment."
+    IDS_VLCRTERR_CREATE_TASK "Cannot create task."
+    IDS_VLCRTERR_DELETE_TASK "Cannot delete task."
+    IDS_VLCRTERR_CATALOG_OBJECT "Cannot catalog object."
+    IDS_VLCRTERR_UNCATALOG_OBJECT "Cannot uncatalog object."
+    IDS_VLCRTERR_INVALID_INTERRUPT "Invalid interrupt level."
+    IDS_VLCRTERR_SET_INTERRUPT "Cannot set interrupt."
+    IDS_VLCRTERR_RESET_INTERRUPT "Cannot reset interrupt."
+    IDS_VLCRTERR_ENABLE_INTERRUPT "Cannot enable interrupt."
+    IDS_VLCRTERR_DISABLE_INTERRUPT "Cannot disable interrupt."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_VLCRTERR_TASK_TIMEOUT 
+                            "Background task initialization sequence timeout."
+    IDS_VLCRTERR_IRMX_ERROR "Fatal error in Irmx."
+    IDS_VLCRTERR_ALIGNMENT  "No 1 byte alignment on '%2'. Software error."
+    IDS_VLCRTERR_OFFLINE_TIMEOUT 
+                            "Time-out while waiting for asynchronous functions to complete."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Singapore) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENE)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_SINGAPORE
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DRVF_WRITE DIALOGEX 0, 0, 279, 145
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Write to Gpib"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,67,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,205,89,50,14
+    PUSHBUTTON      "&Help",IDC_PB_HELP,205,107,50,14
+    LTEXT           "&Timeout (msecs)",IDC_STATIC,110,55,81,8
+    EDITTEXT        IDC_E_TIMEOUT,110,66,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "String to Send",IDC_STATIC,19,17,81,8
+    EDITTEXT        IDC_E_SND_STRING,19,31,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "R&esult",IDC_STATIC,19,55,81,8
+    EDITTEXT        IDC_E_RESULT,19,66,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Status",IDC_STATIC,19,94,77,8
+    EDITTEXT        IDC_E_STATUS,19,108,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "EOI = \\n",IDC_STATIC,110,94,81,8
+    EDITTEXT        IDC_E_EOI,110,108,80,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "String Length",IDC_STATIC,110,17,81,8
+    EDITTEXT        IDC_E_STRLEN,110,31,81,13,ES_AUTOHSCROLL | WS_GROUP
+END
+
+IDD_DRVF_READ DIALOGEX 0, 0, 261, 141
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Read from Gpib"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,199,67,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,199,87,50,14
+    LTEXT           "&Timeout (msecs)",IDC_STATIC,110,55,81,8
+    EDITTEXT        IDC_E_TIMEOUT,110,65,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "String received",IDC_STATIC,19,17,81,8
+    EDITTEXT        IDC_E_RCV_STRING,19,31,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "R&esult",IDC_STATIC,19,55,81,8
+    EDITTEXT        IDC_E_RESULT,19,66,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "&Status",IDC_STATIC,19,94,77,8
+    EDITTEXT        IDC_E_STATUS,19,108,81,13,ES_AUTOHSCROLL | WS_GROUP
+    PUSHBUTTON      "&Help",IDC_PB_HELP,199,106,50,14
+    LTEXT           "End",IDC_STATIC,110,94,81,8
+    EDITTEXT        IDC_E_EOI,110,109,81,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "String Length",IDC_STATIC,110,17,81,8
+    EDITTEXT        IDC_E_STRLEN,110,31,81,13,ES_AUTOHSCROLL | WS_GROUP
+END
+
+IDD_DRVF_SET_ADDR DIALOGEX 0, 0, 219, 132
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Address"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,149,54,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,149,77,50,14
+    LTEXT           "Address",IDC_STATIC,17,17,73,8
+    PUSHBUTTON      "&Help",IDC_PB_HELP,149,96,50,14
+    LTEXT           "&Result code",IDC_STATIC,16,55,73,8
+    EDITTEXT        IDC_E_RESULT,16,66,73,13,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_E_ADDRESS,17,30,74,13,ES_AUTOHSCROLL | WS_GROUP
+END
+
+IDD_DRVF_SET_CODE DIALOGEX 0, 0, 219, 150
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Code"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,149,54,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,149,77,50,14
+    LTEXT           "Code",IDC_STATIC,17,17,73,8
+    PUSHBUTTON      "&Help",IDC_PB_HELP,149,96,50,14
+    LTEXT           "&Result code",IDC_STATIC,16,55,73,8
+    EDITTEXT        IDC_E_RESULT,16,66,73,13,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_E_CODE,17,30,74,13,ES_AUTOHSCROLL | WS_GROUP
+END
+
+IDD_DRVF_CLEAR DIALOGEX 0, 0, 201, 122
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Clear Tx/Rx"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,144,55,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,144,78,50,14
+    PUSHBUTTON      "&Help",IDC_PB_HELP,144,98,50,14
+    LTEXT           "&Result code",IDC_STATIC,15,76,73,8
+    EDITTEXT        IDC_E_RESULT,15,87,73,13,ES_AUTOHSCROLL | WS_GROUP
+    COMBOBOX        IDC_CO_TX_RX,15,30,93,14,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Select",IDC_STATIC,15,20,73,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DRVF_WRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 272
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_DRVF_READ, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_DRVF_SET_ADDR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+
+    IDD_DRVF_SET_CODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_DRVF_CLEAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DRVF_WRITE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DRVF_READ AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DRVF_SET_ADDR AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DRVF_SET_CODE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DRVF_CLEAR AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // English (Singapore) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "drvrid.h"
+#include "version.h"
+#include "NiUsbGpib.hh"
+/* Now the 'code' files */
+#include "verbldll.rc2"
+#include "NiUsbGpib.rcd"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

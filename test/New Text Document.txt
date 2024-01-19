@@ -1,0 +1,15 @@
+
+
+
+
+
+send *TST?
+Pipe Handle: 0xd5cf6e48 (Endpoint Address: 0x1)
+Send 0x14 bytes to the device
+ 0D FA FF FC 08 0A 08 00 2A 54 53 54 3F 0A 00 00   .úÿü....*TST?...
+ 04 00 00 00                                       ....
+000096: Bulk or Interrupt Transfer (UP), 2020-06-09 00:03:58.4068940 +3.0060199. (1. Device: GPIB-USB-HS+) Status: 0x00000000
+Pipe Handle: 0xd5cf6e78 (Endpoint Address: 0x82)
+Get 0xc bytes from the device
+ 0D 00 00 0A FA FF FF FF 04 00 00 00               ....úÿÿÿ....
+

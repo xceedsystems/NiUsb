@@ -1,0 +1,158 @@
+uhub vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2
+uhub0: 8 ports with 8 removable, self powered
+USB_MATCH: enter
+USB_MATCH: bDeviceClass=00 bDeviceSubClass=00 bDeviceProtocol=00
+USB_MATCH: idVendor=060b idProduct=0595
+USB_MATCH: bcdDevice=0110 iManufacturer=00 iProduct=01
+USB_MATCH: iSerialNumber=00 bNumConfigurations=01
+USB_MATCH: bInterfaceNumber=00 bAlternateSetting=00 bNumEndpoints=01
+USB_MATCH: bInterfaceClass=03 bInterfaceSubClass=01 bInterfaceProtocol=01 iInter
+face=00
+USB_MATCH: exit rval=FALSE
+USB_MATCH: enter
+USB_MATCH: bDeviceClass=00 bDeviceSubClass=00 bDeviceProtocol=00
+USB_MATCH: idVendor=060b idProduct=0595
+USB_MATCH: bcdDevice=0110 iManufacturer=00 iProduct=01
+USB_MATCH: iSerialNumber=00 bNumConfigurations=01
+USB_MATCH: bInterfaceNumber=01 bAlternateSetting=00 bNumEndpoints=01
+USB_MATCH: bInterfaceClass=03 bInterfaceSubClass=00 bInterfaceProtocol=00 iInter
+face=00
+USB_MATCH: exit rval=FALSE
+unknown: at uhub0 port 5 (addr 3) connected. No driver was found for this device
+.
+USB_MATCH: enter
+USB_MATCH: bDeviceClass=00 bDeviceSubClass=00 bDeviceProtocol=00
+USB_MATCH: idVendor=0403 idProduct=6001
+USB_MATCH: bcdDevice=0600 iManufacturer=01 iProduct=02
+USB_MATCH: iSerialNumber=03 bNumConfigurations=01
+USB_MATCH: bInterfaceNumber=00 bAlternateSetting=00 bNumEndpoints=02
+USB_MATCH: bInterfaceClass=ff bInterfaceSubClass=ff bInterfaceProtocol=ff iInter
+face=02
+USB_MATCH: exit rval=FALSE
+unknown: at uhub0 port 7 (addr 4) connected. No driver was found for this device
+.
+USB_MATCH: enter
+USB_MATCH: bDeviceClass=00 bDeviceSubClass=00 bDeviceProtocol=00
+USB_MATCH: idVendor=3923 idProduct=761e
+USB_MATCH: bcdDevice=0100 iManufacturer=01 iProduct=02
+USB_MATCH: iSerialNumber=03 bNumConfigurations=01
+USB_MATCH: bInterfaceNumber=00 bAlternateSetting=00 bNumEndpoints=02
+USB_MATCH: bInterfaceClass=ff bInterfaceSubClass=00 bInterfaceProtocol=00 iInter
+face=00
+USB_MATCH: exit rval=FALSE
+unknown: at uhub0 port 8 (addr 5) connected. No driver was found for this device
+.
+
+
+
+
+
+
+I am in USB events:
+
+Monitoring USB events:
+
+vendor 0x060b (060b) USB Keyboard (0595)
+  device: class 0/0 (Per Interface/-), rev 1.10/1.10
+  speed low, power 100, bus 0, addr 3, port 5, depth 2
+    iface: 0 of 2, class 3/1/1 (HID/Boot/Keyboard)
+        driver=not attached
+    Ep[1] Addr 81 (IN) Attribs 03 (INT) PktSize 8 Interval 10
+        [HID Report Description / Country='Not Supported']
+          > 01 09 06 a1 01 05 08 19 01 29 03 15 00 25 01
+          > 01 95 03 91 02 95 05 91 01 05 07 19 e0 29 e7
+          > 08 81 02 75 08 95 01 81 01 19 00 29 91 26 ff
+          > 95 06 81 00 c0
+
+vendor 0x060b (060b) USB Keyboard (0595)
+  device: class 0/0 (Per Interface/-), rev 1.10/1.10
+  speed low, power 100, bus 0, addr 3, port 5, depth 2
+    iface: 1 of 2, class 3/0/0 (HID/-/-)
+        driver=not attached
+    Ep[1] Addr 82 (IN) Attribs 03 (INT) PktSize 4 Interval 10
+        [HID Report Description / Country='Not Supported']
+          > 01 09 80 a1 01 85 02 25 01 15 00 75 01 09 81
+          > 82 09 83 95 03 81 06 95 05 81 01 c0 05 0c 09
+          > a1 01 85 03 25 01 15 00 75 01 09 b5 09 b6 09
+          > 09 cd 09 e2 09 e9 09 ea 0a 8a 01 0a 21 02 0a
+          > 02 0a 24 02 0a 25 02 0a 26 02 0a 27 02 0a 2a
+          > 0a 83 01 0a 92 01 0a 94 01 95 12 81 02 95 06
+          > 01 06 00 ff 09 01 a1 01 85 04 05 09 19 10 29
+          > 25 01 15 00 75 01 95 10 81 02 c0 c0
+
+FTDI (0403) FT232R USB UART (6001) A403CPN9
+  device: class 0/0 (Per Interface/-), rev 2.00/6.00
+  speed full, power 90, bus 0, addr 4, port 7, depth 2
+    iface: 0 of 1, class 255/255/255 (Vendor Specific/-/-)
+        driver=not attached
+    Ep[1] Addr 81 (IN) Attribs 02 (BULK) PktSize 64 Interval 0
+    Ep[2] Addr 02 (OUT) Attribs 02 (BULK) PktSize 64 Interval 0
+
+National Instruments (3923) GPIB-USB-HS+ (761e) 01ED4D17
+  device: class 0/0 (Per Interface/-), rev 2.00/1.00
+  speed high, power 500, bus 0, addr 5, port 8, depth 2
+    iface: 0 of 1, class 255/0/0 (Vendor Specific/-/-)
+        driver=not attached
+    Ep[1] Addr 81 (IN) Attribs 02 (BULK) PktSize 512 Interval 100
+    Ep[2] Addr 03 (OUT) Attribs 02 (BULK) PktSize 512 Interval 100
+
+vendor 0x060b (060b) USB Keyboard (0595)
+  device: class 0/0 (Per Interface/-), rev 1.10/1.10
+  speed low, power 100, bus 0, addr 3, port 5, depth 2
+    iface: 0 of 2, class 3/1/1 (HID/Boot/Keyboard)
+        driver=not attached
+    Ep[1] Addr 81 (IN) Attribs 03 (INT) PktSize 8 Interval 10
+
+
+
+
+I am in USB events:
+
+Monitoring USB events:
+
+vendor 0x060b (060b) USB Keyboard (0595)
+  device: class 0/0 (Per Interface/-), rev 1.10/1.10
+  speed low, power 100, bus 0, addr 3, port 6, depth 2
+    iface: 0 of 2, class 3/1/1 (HID/Boot/Keyboard)
+        driver=not attached
+    Ep[1] Addr 81 (IN) Attribs 03 (INT) PktSize 8 Interval 10
+        [HID Report Description / Country='Not Supported']
+          > 01 09 06 a1 01 05 08 19 01 29 03 15 00 25 01
+          > 01 95 03 91 02 95 05 91 01 05 07 19 e0 29 e7
+          > 08 81 02 75 08 95 01 81 01 19 00 29 91 26 ff
+          > 95 06 81 00 c0
+
+vendor 0x060b (060b) USB Keyboard (0595)
+  device: class 0/0 (Per Interface/-), rev 1.10/1.10
+  speed low, power 100, bus 0, addr 3, port 6, depth 2
+    iface: 1 of 2, class 3/0/0 (HID/-/-)
+        driver=not attached
+    Ep[1] Addr 82 (IN) Attribs 03 (INT) PktSize 4 Interval 10
+        [HID Report Description / Country='Not Supported']
+          > 01 09 80 a1 01 85 02 25 01 15 00 75 01 09 81
+          > 82 09 83 95 03 81 06 95 05 81 01 c0 05 0c 09
+          > a1 01 85 03 25 01 15 00 75 01 09 b5 09 b6 09
+          > 09 cd 09 e2 09 e9 09 ea 0a 8a 01 0a 21 02 0a
+          > 02 0a 24 02 0a 25 02 0a 26 02 0a 27 02 0a 2a
+          > 0a 83 01 0a 92 01 0a 94 01 95 12 81 02 95 06
+          > 01 06 00 ff 09 01 a1 01 85 04 05 09 19 10 29
+          > 25 01 15 00 75 01 95 10 81 02 c0 c0
+
+FTDI (0403) FT232R USB UART (6001) A403CPN9
+  device: class 0/0 (Per Interface/-), rev 2.00/6.00
+  speed full, power 90, bus 0, addr 4, port 7, depth 2
+    iface: 0 of 1, class 255/255/255 (Vendor Specific/-/-)
+        driver=not attached
+    Ep[1] Addr 81 (IN) Attribs 02 (BULK) PktSize 64 Interval 0
+    Ep[2] Addr 02 (OUT) Attribs 02 (BULK) PktSize 64 Interval 0
+
+National Instruments (3923) GPIB-USB-HS+ (761e) 01ED4D17
+  device: class 0/0 (Per Interface/-), rev 2.00/1.00
+  speed high, power 500, bus 0, addr 5, port 8, depth 2
+    iface: 0 of 1, class 255/0/0 (Vendor Specific/-/-)
+        driver=not attached
+    Ep[1] Addr 81 (IN) Attribs 02 (BULK) PktSize 512 Interval 100
+    Ep[2] Addr 03 (OUT) Attribs 02 (BULK) PktSize 512 Interval 100
+
+
+

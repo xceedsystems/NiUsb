@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{130e1580-7d26-4dfa-9d3f-daaedf953c43}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{44c782b1-766b-4e72-990e-151954a0e925}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{747c6c75-0e11-42f3-affc-79045587f46e}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Local Inc">
+      <UniqueIdentifier>{6d24168d-c39a-475a-b624-5a024e0e75b4}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="auxrut.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Card.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="task.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="niUsbGpib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ni_usb_gpib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="auxrut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Card.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STDAFX.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="task.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\INC\Driver.h">
+      <Filter>Local Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\INC\Errors.h">
+      <Filter>Local Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\INC\Version.h">
+      <Filter>Local Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="hid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="niUsbGpib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gpib_ioctl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gpib_user.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ni_usb_gpib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nec7210_registers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tnt4882_registers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VERSION.RC">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="RELEASE.CMD" />
+    <CustomBuild Include="REPLACE.CMD" />
+  </ItemGroup>
+</Project>

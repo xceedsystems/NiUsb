@@ -1,0 +1,6 @@
+National Instruments GPIB-USB-HS and GPIP-USB-HS+
+Unlike the USB-B, the USB-HS does not require a firmware upload to become functional after being plugged in. Most GPIB-USB-HS+ also do not require firmware upload, however some exceptions have been identified. If your GPIB-USB-HS+ initially
+comes up with a USB product id of 0x761e it will require a one-time firmware upload
+which permanently changes the product id to the usual 0x7618 for a GPIB-USB-HS+.
+Currently this can be done by plugging
+

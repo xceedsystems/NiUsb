@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b5b70bda-89af-4b9a-969b-2af1fb2d3247}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{ad27d2d0-18fc-4dab-8c83-cbd2c7120da1}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{c4a8ad63-ebc0-4644-a3fa-46c623cb9a99}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Local Inc">
+      <UniqueIdentifier>{5a32bf91-0fa6-4012-a41e-741b2bf11897}</UniqueIdentifier>
+      <Extensions>h,hh</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DEVICES.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GOODIES.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MFCSTUFF.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NETWORK.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POINTS.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NiUsbGpib.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\RUNTIME\VERSION.RC">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="NIUSBGPIB.RC">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DEVICES.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GOODIES.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MFCSTUFF.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NETWORK.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POINTS.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\INC\Driver.h">
+      <Filter>Local Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\INC\Errors.h">
+      <Filter>Local Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\INC\Version.h">
+      <Filter>Local Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\INC\NiUsbGpib.hh">
+      <Filter>Local Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="NIUSBGPIB.RCD">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
